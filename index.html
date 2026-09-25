@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Mafaza Afifah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<header class="navbar-header">
+  <nav class="navbar">
+    <a href="#home" class="logo">ZAZA<span>.</span></a>
+    
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-btn">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+<section id="home" class="hero">
+  <!-- Elemen dekorasi background glow -->
+  <div class="hero-bg-glow"></div>
+
+  <div class="hero-container">
+    <div class="hero-text">
+      <span class="greeting-badge">👋 Hai, saya</span>
+      <h1 class="hero-name">Mafaza Afifah</h1>
+      <p class="subtitle">Graphic Designer & Web Developer</p>
+      
+      <p class="description">
+        <strong>Pengalaman:</strong><br>
+        Saya berpengalaman dalam bidang desain grafis, penyuntingan foto, dan pengembangan website kreatif. Berfokus untuk terus belajar dan berinovasi demi mewujudkan cita-cita sebagai seorang animator.
+      </p>
+
+      <blockquote class="quote">
+        "Selangkah demi selangkah, aku menjadi seseorang yang ingin aku capai."
+      </blockquote>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">Tentang Saya</a>
+        <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="image-wrapper">
+        <!-- Badge dekoratif melayang -->
+        <div class="floating-badge badge-1">🎨 Creative</div>
+        <div class="floating-badge badge-2">💻 WebDeveloper</div>
+        
+        <!-- Frame foto utama -->
+        <div class="blob-frame">
+          <img src="img/foto zaza.png" alt="Mafaza Afifah">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner">
+  <div class="stat-card">
+    <span class="stat-number">4+</span>
+    <span class="stat-label">Websites Built</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-number">3+</span>
+    <span class="stat-label">Projects Completed</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-number">2+</span>
+    <span class="stat-label">Months Experience</span>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+  <div class="about-container">
+    <!-- Bagian Foto (Sebelah Kiri) -->
+    <div class="about-image">
+      <div class="image-frame">
+        <img src="img/foto zaza ke 2.png" alt="Kumpulan Foto Zaza">
+      </div>
+    </div>
+
+    <!-- Bagian Teks (Sebelah Kanan) -->
+    <div class="about-card">
+      <h2 class="about-title">About Me ✨</h2>
+      <p class="about-description">
+        Halo! Saya seorang pelajar yang berfokus pada dunia <span>desain visual</span> dan <span>kreativitas digital</span>. Berawal dari hobi membuat desain dan mengedit foto, saya terus mengeksplorasi ide-ide baru untuk menciptakan karya yang tidak hanya estetik, tetapi juga bermakna.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+  <h1 class="skills-title">
+    Skill Aku?? <span id="typewriter" class="highlight"></span>
+  </h1>
+  <div class="skill-list">
+    <div class="skill-item reveal">
+      <h2>🎨 Graphic Design</h2>
+      <p>Membuat desain visual yang menarik dan sesuai dengan ide atau konsep.</p>
+    </div>
+    <div class="skill-item reveal">
+      <h2>🖼️ Photo Editing</h2>
+      <p>Mengedit dan mengatur foto agar terlihat lebih menarik dan kreatif.</p>
+    </div>
+    <div class="skill-item reveal">
+      <h2>📱 Content Creator</h2>
+      <p>Membuat dan mengembangkan konten kreatif untuk media sosial.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+      </div>
+      <div class="form-group">
+        <label for="gmail">Gmail:</label>
+        <input type="email" id="gmail" name="gmail" required>
+      </div>
+      <div class="form-group">
+        <label for="pesan">Kirim pesan:</label>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Kirim</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,671 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fdfaf2;
+  color: #a46d51;
+}
+
+/* ================= NAVBAR STYLING ================= */
+.navbar-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Efek Kaca Transparan (Glassmorphism) */
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(196, 139, 113, 0.15);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #4a2e22;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #c48b71; /* Titik warna aksen cokelat muda */
+}
+
+/* Menu Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6e5a51;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4a2e22;
+}
+
+/* Animasi Garis Bawah saat Hover */
+.nav-links a:not(.nav-btn)::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c48b71;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links a:not(.nav-btn):hover::after {
+  width: 100%;
+}
+
+/* Tombol Kontak Spesial di Navbar */
+.nav-btn {
+  background-color: #a06b52;
+  color: #ffffff !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(160, 107, 82, 0.2);
+  transition: all 0.3s ease !important;
+}
+
+.nav-btn:hover {
+  background-color: #85533c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(160, 107, 82, 0.3);
+}
+
+/* Responsif Layar HP */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+}
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  /* Background Gradasi Warm Nude Modern */
+  background: radial-gradient(circle at 10% 20%, #fdfbf7 0%, #f7efeb 100%);
+}
+
+/* Pola latar belakang abstrak lembut */
+.hero-bg-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(196, 139, 113, 0.25);
+  filter: blur(90px);
+  border-radius: 50%;
+  top: 10%;
+  right: 15%;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+/* --- TEXT CONTENT --- */
+.hero-text {
+  flex: 1.2;
+}
+
+.greeting-badge {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a06b52;
+  background: rgba(160, 107, 82, 0.12);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 800;
+  /* Membuat gradasi warna cokelat tua ke cokelat muda */
+  background: linear-gradient(90deg, #4a2e22 0%, #c48b71 50%, #4a2e22 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Animasi bergeser selama 4 detik terus menerus */
+  animation: shineText 4s linear infinite;
+}
+
+@keyframes shineText {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6e5a51;
+  margin-bottom: 1.2rem;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #8c6a5a;
+  border-left: 3px solid #c48b71;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #a06b52;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(160, 107, 82, 0.25);
+}
+
+.btn-primary:hover {
+  background: #85533c;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(160, 107, 82, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #a06b52;
+  border: 2px solid #a06b52;
+}
+
+.btn-secondary:hover {
+  background: #a06b52;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* --- IMAGE & BLOB FRAME --- */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 320px;
+  height: 380px;
+}
+
+/* Bentuk Frame Organik / Blob */
+.blob-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e2cbbe, #a06b52);
+  padding: 8px;
+  box-shadow: 0 20px 40px rgba(160, 107, 82, 0.2);
+  animation: blobAnimate 8s ease-in-out infinite alternate;
+}
+
+.blob-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 55% 45% 65% 35% / 45% 55% 35% 55%;
+}
+
+/* Animasi Perubahan Bentuk Frame */
+@keyframes blobAnimate {
+  0% {
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  }
+  100% {
+    border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+  }
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  background: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5c3523;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+.badge-1 {
+  top: 10%;
+  left: -15%;
+}
+
+.badge-2 {
+  bottom: 12%;
+  right: -10%;
+  animation-delay: 2s;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* RESPONSIF UNTUK HP */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    flex: none;
+  }
+
+  .quote {
+    border-left: none;
+    border-bottom: 2px solid #c48b71;
+    padding-left: 0;
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .image-wrapper {
+    width: 260px;
+    height: 310px;
+  }
+
+  .badge-1 { left: -5%; }
+  .badge-2 { right: -5%; }
+}
+
+
+/* --- Styling Foto About (Kumpulan Foto) --- */
+.about-image .image-frame {
+  width: 230px;
+  height: 310px;
+  /* Bentuk bingkai rounded card modern dengan sudut asimetris */
+  border-radius: 24px;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(164, 109, 81, 0.18);
+  background-color: #dfb395;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efek bingkai ganda (double border style aesthetic) */
+.about-image .image-frame::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 2px dashed #c99374;
+  border-radius: 30px;
+  z-index: -1;
+  transition: transform 0.4s ease;
+}
+
+.about-image .image-frame:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(164, 109, 81, 0.25);
+}
+
+.about-image .image-frame:hover::before {
+  transform: rotate(5deg);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image .image-frame:hover img {
+  transform: scale(1.08);
+}
+/* Stats Banner */
+.stats-banner {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Efek Hover Keren */
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.75rem;
+    font-weight: 800;
+    /* Gradient warna cokelat/amber modern agar cocok dengan tema asal */
+    background: linear-gradient(135deg, #c48b71 0%, #8c533e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+.stat-item p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Container Utama About (Membuat Gambar & Teks Sejajar) */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row; /* Berjajar ke samping */
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* Jarak antara foto dan kartu teks */
+  max-width: 950px;
+  width: 100%;
+}
+
+/* Styling Gambar & Frame Keren */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame {
+  width: 260px;
+  height: 260px;
+  border-radius: 30px; /* Sudut membulat modern */
+  padding: 8px;
+  background: linear-gradient(135deg, #e2cbbe, #a06b52); /* Ring bingkai gradasi */
+  box-shadow: 0 12px 30px rgba(160, 107, 82, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-frame:hover {
+  transform: scale(1.03) rotate(-2deg); /* Efek interaktif saat di-hover */
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* Styling Kartu Teks */
+.about-card {
+  flex: 1.5;
+  background: #ffffff;
+  border: 1px solid #e8ded8;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.about-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #5c3523;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6e5a51;
+}
+
+.about-description span {
+  color: #a06b52;
+  font-weight: 700;
+}
+
+/* Tampilan di HP (Otomatis Menumpuk ke Bawah saat Layar Kecil) */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .image-frame {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Styling Section Skills */
+.skills {
+  padding: 60px 50px;
+  width: 100%;
+}
+
+.skills-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #a06b52;
+    text-align: center;
+  }
+
+  .highlight {
+    color: #6e422f;
+    border-right: 3px solid #6e422f;
+    padding-right: 4px;
+    animation: blink 0.75s step-end infinite;
+  }
+
+
+/* Styling Kartu Skill */
+.skill-item {
+  width: 100%;
+  background-color: #f3e5d8;
+  padding: 24px 30px;
+  border-radius: 12px;
+  border-left: 6px solid #c99374;
+  box-shadow: 0 4px 15px rgba(164, 109, 81, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover saat Kursor Diarahkan ke Kartu */
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(164, 109, 81, 0.18);
+}
+
+.skill-item h2 {
+  font-size: 1.35rem;
+  color: #a46d51;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #83543d;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Base Class Animasi Scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Section - Kotak Form Lebih Besar & Memenuhi Halaman */
+.contact {
+  padding: 60px 50px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #a46d51;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #a46d51;
+}
+
+/* Memperbesar Kotak Input & Textarea */
+.form-group input {
+  width: 100%;
+  padding: 16px 20px; /* Menambah ruang dalam (tinggi & lebar isi) */
+  border: none;
+  background-color: #ebbfa3;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.1rem; /* Ukuran teks input lebih besar */
+  color: #5c3826;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  background-color: #ebbfa3;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.1rem;
+  color: #5c3826;
+  min-height: 180px; /* Mempertinggi kotak area isi pesan */
+  resize: vertical;
+}
+
+/* Memperbesar Tombol Kirim */
+.btn-submit {
+  margin-top: 15px;
+  padding: 14px 40px;
+  background-color: #c99374;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #a46d51;
+  transform: translateY(-2px);
+}
