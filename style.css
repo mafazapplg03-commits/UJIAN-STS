@@ -494,63 +494,34 @@ body {
 
 <!-- CSS Animasi Modern -->
 <style>
-/* Reset & Fondasi Kartu */
+/* Styling Kartu Teks */
 .about-card {
+  flex: 1.5;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  
-  /* Animasi saat halaman dimuat */
-  animation: fadeInUp 0.8s ease-out forwards;
+  border: 1px solid #e8ded8;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Efek Hover Pada Kartu */
-.about-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 40px rgba(184, 115, 51, 0.15);
-  border-color: rgba(184, 115, 51, 0.2);
-}
-
-/* Judul & Animasi Sparkle ✨ */
 .about-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #4a2e2b;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #5c3523;
+  margin-bottom: 1rem;
 }
 
-.sparkle {
-  display: inline-block;
-  animation: floatSparkle 2s infinite ease-in-out;
-}
-
-/* Deskripsi Teks */
 .about-description {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #665553;
+  color: #6e5a51;
 }
 
-/* Highlight Teks dengan Efek Glow Gradient */
-.highlight {
+.about-description span {
+  color: #a06b52;
   font-weight: 700;
-  background: linear-gradient(120deg, #b87333 0%, #e6a15c 50%, #b87333 100%);
-  background-size: 200% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: all 0.3s ease;
-  display: inline-block;
 }
+
 
 .about-card:hover .highlight {
   animation: shine 2s linear infinite;
