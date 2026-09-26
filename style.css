@@ -494,21 +494,25 @@ body {
 
 /* Container Utama About Section */
 .about-section {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem; /* Menambah jarak atas-bawah agar tidak menempel dengan section atas */
+  box-sizing: border-box;
 }
 
 /* Card Pembungkus Teks */
 .about-card {
-  max-width: 650px; /* Membatasi panjang baris teks agar nyaman dibaca */
+  width: 100%;
+  max-width: 680px; /* Membatasi lebar maksimal agar teks rapi di tengah */
   margin: 0 auto;
   padding: 2.5rem;
-  background-color: #ffffff; /* Ubah warna background sesuai tema Anda */
+  background-color: #ffffff; /* Latar belakang kartu putih */
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Efek bayangan halus */
-  text-align: left; /* Atau 'center' jika ingin posisi teks di tengah */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); /* Efek bayangan halus */
+  text-align: left;
+  box-sizing: border-box;
 }
 
 /* Judul About Me */
@@ -516,7 +520,8 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #333333;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -525,21 +530,36 @@ body {
 /* Deskripsi Teks */
 .about-description {
   font-size: 1.05rem;
-  line-height: 1.8; /* Menambah jarak antar baris teks */
+  line-height: 1.8; /* Memberikan spasi antar baris agar nyaman dibaca */
   color: #555555;
+  margin: 0;
 }
 
-/* Teks Penekanan (span) */
-.about-description span {
+/* Teks Penekanan (span & highlight) */
+.about-description span,
+.about-description .highlight {
   font-weight: 600;
-  color: #a06b52; /* Warna aksen penekanan */
+  color: #a06b52; /* Warna aksen cokelat hangat */
+  transition: color 0.3s ease;
 }
 
-
+/* Efek Hover Animasi pada Teks Highlight */
 .about-card:hover .highlight {
   animation: shine 2s linear infinite;
 }
 
+/* Keyframes / Animasi Gerak */
+@keyframes shine {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 /* Keyframes / Animasi Gerak */
 
 /* 1. Animasi Bintang Berkedip & Membesar */
