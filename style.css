@@ -492,34 +492,47 @@ body {
   border-radius: 22px;
 }
 
-<!-- CSS Animasi Modern -->
-<style>
-/* Styling Kartu Teks */
+/* Container Utama About Section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+/* Card Pembungkus Teks */
 .about-card {
-  flex: 1.5;
-  background: #ffffff;
-  border: 1px solid #e8ded8;
-  border-radius: 24px;
+  max-width: 650px; /* Membatasi panjang baris teks agar nyaman dibaca */
+  margin: 0 auto;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  background-color: #ffffff; /* Ubah warna background sesuai tema Anda */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Efek bayangan halus */
+  text-align: left; /* Atau 'center' jika ingin posisi teks di tengah */
 }
 
+/* Judul About Me */
 .about-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #5c3523;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+/* Deskripsi Teks */
 .about-description {
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: #6e5a51;
+  line-height: 1.8; /* Menambah jarak antar baris teks */
+  color: #555555;
 }
 
+/* Teks Penekanan (span) */
 .about-description span {
-  color: #a06b52;
-  font-weight: 700;
+  font-weight: 600;
+  color: #a06b52; /* Warna aksen penekanan */
 }
 
 
