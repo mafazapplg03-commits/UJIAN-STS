@@ -35,7 +35,6 @@
       
       <p class="description">
         <strong>Pengalaman:</strong><br>
-        ### Pengalaman
 
 Saya memiliki pengalaman dalam membuat desain sederhana, mengedit foto, dan membuat website menggunakan HTML dan CSS. Saya juga sering mencoba berbagai ide kreatif untuk menghasilkan karya yang menarik. Dari setiap proses, saya terus belajar dan mengembangkan kemampuan saya di bidang desain dan teknologi.
  Berfokus untuk terus belajar dan berinovasi demi mewujudkan cita-citaku.
