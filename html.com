@@ -94,13 +94,15 @@ Saya memiliki pengalaman dalam membuat desain sederhana, mengedit foto, dan memb
       </div>
     </div>
 
-    <!-- Bagian Teks (Sebelah Kanan) -->
-    <div class="about-card">
-      <h2 class="about-title">About Me ✨</h2>
-      <p class="about-description">
-        Halo! Saya seorang pelajar yang tertarik pada <span>desain visual</span> dan <span>kreativitas digital</span>. Saya suka membuat desain, mengedit foto, dan membuat website sederhana. Saya terus belajar untuk mengembangkan kreativitas dan kemampuan saya.
-      </p>
-    </div>
+   <!-- Struktur HTML -->
+<section class="about-section">
+  <div class="about-card">
+    <h2 class="about-title">
+      About Me <span class="sparkle">✨</span>
+    </h2>
+    <p class="about-description">
+      Halo! Saya seorang pelajar yang tertarik pada <span class="highlight">desain visual</span> dan <span class="highlight">kreativitas digital</span>. Saya suka membuat desain, mengedit foto, dan membuat website sederhana. Saya terus belajar untuk mengembangkan kreativitas dan kemampuan saya.
+    </p>
   </div>
 </section>
 
